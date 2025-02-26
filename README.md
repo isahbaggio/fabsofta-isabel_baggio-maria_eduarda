@@ -8,7 +8,7 @@
   - Cadastrar acessórios
   - Excluir cadastros
   - Edições de cadastro
-  - Sugestões de looks com base no clima
+  - Sugestões de looks com base na previsão metereológica
  
 
 # Comandos do Git 
