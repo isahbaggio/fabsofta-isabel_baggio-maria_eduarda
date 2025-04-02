@@ -4,7 +4,8 @@
 
 - Closet Virtual
   - Cadastrar sapatos
-  - Cadastrar roupas (em geral)
+  - Cadastrar partes de roupas superiores
+  - Cadastrar partes de roupas inferiores
   - Cadastrar acessórios
   - Excluir cadastros
   - Edições de cadastro
