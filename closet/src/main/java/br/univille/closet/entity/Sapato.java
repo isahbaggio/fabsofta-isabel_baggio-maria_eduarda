@@ -1,4 +1,4 @@
-package entity;
+package br.univille.closet.entity;
 
 public class Sapato {
     private int id;

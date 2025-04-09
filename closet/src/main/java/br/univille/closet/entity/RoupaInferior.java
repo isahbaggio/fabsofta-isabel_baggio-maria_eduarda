@@ -1,6 +1,6 @@
-package entity;
+package br.univille.closet.entity;
 
-public class RoupaSuperior {
+public class RoupaInferior {
     private int id;
     private String tipo;
     private String cor;
@@ -8,7 +8,7 @@ public class RoupaSuperior {
     private String tecido;
 
     // Construtor
-    public RoupaSuperior(int id, String tipo, String cor, String tamanho, String tecido) {
+    public RoupaInferior(int id, String tipo, String cor, String tamanho, String tecido) {
         this.id = id;
         this.tipo = tipo;
         this.cor = cor;
