@@ -1,17 +1,23 @@
 package br.univille.closet.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Look{
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private long id;
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private RoupaInferior roupaInferior;
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private RoupaSuperior roupaSuperior;
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private Acessorios acessorio;
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private Sapato sapato;
 
     public long getId() {
