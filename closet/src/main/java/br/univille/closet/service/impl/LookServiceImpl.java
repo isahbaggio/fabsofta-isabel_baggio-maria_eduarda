@@ -15,27 +15,30 @@ public class LookServiceImpl implements LookService{
     private LookRepository repository;
 
     @Override
-    public Look save(Look acessorios) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+    public Look save(Look look){
+        return repository.save(look);
+    }
+    
+    @Override
+    public Look delete(long id) {
+        var look = getById(id);
+        if(look != null)
+            repository.deleteById(id);
+        return look;    
     }
 
     @Override
     public List<Look> getAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
+        return repository.findAll();
     }
 
     @Override
     public Look getById(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getById'");
-    }
+        var retorno = repository.findById(id);
+        if (retorno.isPresent()) {
+                return retorno.get();
+        }
+        return null;
 
-    @Override
-    public Look delete(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
-    }
-
+}
 }

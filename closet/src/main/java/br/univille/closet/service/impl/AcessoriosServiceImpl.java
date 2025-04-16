@@ -10,32 +10,35 @@ import br.univille.closet.service.AcessoriosService;
 
 @Service
 public class AcessoriosServiceImpl implements AcessoriosService{
-    
+
     @Autowired
     private AcessoriosRepository repository;
 
     @Override
-    public Acessorios save(Acessorios acessorios) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+    public Acessorios save(Acessorios acessorios){
+        return repository.save(acessorios);
+    }
+        
+    @Override
+    public Acessorios delete(long id) {
+        var acessorios = getById(id);
+        if(acessorios != null)
+            repository.deleteById(id);
+        return acessorios;    
     }
 
     @Override
     public List<Acessorios> getAll() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
+        return repository.findAll();
     }
 
     @Override
     public Acessorios getById(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getById'");
-    }
+        var retorno = repository.findById(id);
+        if (retorno.isPresent()) {
+                return retorno.get();
+        }
+        return null;
 
-    @Override
-    public Acessorios delete(long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
     }
-
 }
