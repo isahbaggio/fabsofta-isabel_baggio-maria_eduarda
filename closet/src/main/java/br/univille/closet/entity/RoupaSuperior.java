@@ -1,27 +1,25 @@
 package br.univille.closet.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class RoupaSuperior {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    private long id;
     private String tipo;
     private String cor;
     private String tamanho;
     private String tecido;
 
-    // Construtor
-    public RoupaSuperior(int id, String tipo, String cor, String tamanho, String tecido) {
-        this.id = id;
-        this.tipo = tipo;
-        this.cor = cor;
-        this.tamanho = tamanho;
-        this.tecido = tecido;
-    }
-
     // Getters e Setters
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

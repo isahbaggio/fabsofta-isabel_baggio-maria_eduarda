@@ -1,16 +1,25 @@
 package br.univille.closet.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Look{
+    @Id
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    private long id;
     private RoupaInferior roupaInferior;
     private RoupaSuperior roupaSuperior;
     private Acessorios acessorio;
     private Sapato sapato;
 
-    public Look(RoupaInferior roupaInferior, RoupaSuperior roupaSuperior, Acessorios acessorio, Sapato sapato) {
-        this.roupaInferior = roupaInferior;
-        this.roupaSuperior = roupaSuperior;
-        this.acessorio = acessorio;
-        this.sapato = sapato;
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public RoupaInferior getRoupaInferior() {
