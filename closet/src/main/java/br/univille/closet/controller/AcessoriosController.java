@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.closet.entity.Acessorios;
 import br.univille.closet.service.AcessoriosService;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/api/acessorios")
+@RequestMapping("/api/v1/acessorios")
 public class AcessoriosController {
     @Autowired
     private AcessoriosService service;
@@ -45,7 +47,7 @@ public class AcessoriosController {
     public ResponseEntity<Acessorios>
         putAcessorios(@PathVariable long id,
                     @RequestBody Acessorios acessorios){
-        if ((id <= 0 || acessorios == null)) {{
+        if ((id <= 0 || acessorios == null)) {
             return ResponseEntity.badRequest().build();
         }
         var acessoriosAntigo = service.getById(id);
@@ -53,7 +55,23 @@ public class AcessoriosController {
             return ResponseEntity.notFound().build();
         }
 
-        acessoriosAntigo.set
+        acessoriosAntigo.setTipo(acessorios.getTipo());
+        acessoriosAntigo.setCor(acessorios.getCor());
+        acessoriosAntigo.setMaterial(acessorios.getMaterial());
+
+        service.save(acessoriosAntigo);
+        return new ResponseEntity<Acessorios>(acessoriosAntigo, HttpStatus.OK);
     }  
+    @DeleteMapping
+    public ResponseEntity<Acessorios> deleteAcessorios(@PathVariable long id){
+        if(id <= 0){
+            return ResponseEntity.badRequest().build();
+        }
+        var acessoriosExcluir = service.getById(id);
+        if(acessoriosExcluir == null){
+            return ResponseEntity.notFound().build();
+        }
+        service.delete(id);
+        return new ResponseEntity<Acessorios>(acessoriosExcluir, HttpStatus.OK);
+    }
 } 
-}

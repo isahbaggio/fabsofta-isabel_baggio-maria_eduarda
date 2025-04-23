@@ -16,7 +16,7 @@ public class Look{
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private RoupaSuperior roupaSuperior;
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
-    private Acessorios acessorio;
+    private Acessorios acessorios;
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private Sapato sapato;
 
@@ -45,11 +45,11 @@ public class Look{
     }
 
     public Acessorios getAcessorio() {
-        return acessorio;
+        return acessorios;
     }
 
-    public void setAcessorio(Acessorios acessorio) {
-        this.acessorio = acessorio;
+    public void setAcessorio(Acessorios acessorios) {
+        this.acessorios = acessorios;
     }
 
     public Sapato getSapato() {

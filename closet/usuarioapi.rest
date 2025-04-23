@@ -1,0 +1,40 @@
+### API USUARIO GET
+GET http://localhost:8080/api/v1/usuarios
+
+
+
+### API USUARIO POST
+POST http://localhost:8080/api/v1/usuarios
+Content-Type: application/json
+
+{
+    "nome": "zezinho",
+    "email": "ze@ze.com.br",
+    "senha": "5555",
+    "altura": "1.68",
+    "peso": "70",
+    "busto": "90",
+    "cintura": "80",
+    "quadril": "90"
+}
+
+
+
+### API CLIENTE PUT
+PUT http://localhost:8080/api/v1/usuarios/1
+Content-Type: application/json
+
+{
+    "nome": "zezinho da silva",
+    "email": "zeze@ze.com.br",
+    "senha": "55556",
+    "altura": "1.70",
+    "peso": "75",
+    "busto": "98",
+    "cintura": "81",
+    "quadril": "92"
+}
+
+
+### API CLIENTE DELETE
+DELETE http://localhost:8080/api/v1/usuarios/1
