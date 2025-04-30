@@ -1,14 +1,12 @@
 ### API USUARIO GET
 GET http://localhost:8080/api/v1/usuarios
 
-
-
 ### API USUARIO POST
 POST http://localhost:8080/api/v1/usuarios
 Content-Type: application/json
 
 {
-    "nome": "zezinho",
+    "nome": "zezinha",
     "email": "ze@ze.com.br",
     "senha": "5555",
     "altura": "1.68",
@@ -18,10 +16,8 @@ Content-Type: application/json
     "quadril": "90"
 }
 
-
-
 ### API USUARIO PUT
-PUT http://localhost:8080/api/v1/usuarios/1
+PUT http://localhost:8080/api/v1/usuarios/2
 Content-Type: application/json
 
 {
@@ -35,16 +31,13 @@ Content-Type: application/json
     "quadril": "92"
 }
 
-
 ### API USUARIO DELETE
-DELETE http://localhost:8080/api/v1/usuarios/1
+DELETE http://localhost:8080/api/v1/usuarios/4
 
 ##################################################################
 
 ### API SAPATO GET
 GET http://localhost:8080/api/v1/sapatos
-
-
 
 ### API SAPATO POST
 POST http://localhost:8080/api/v1/sapatos
@@ -57,10 +50,8 @@ Content-Type: application/json
     "marca": "vans"
 }
 
-
-
 ### API SAPATO PUT
-PUT http://localhost:8080/api/v1/sapatos/1
+PUT http://localhost:8080/api/v1/sapatos/2
 Content-Type: application/json
 
 {
@@ -70,16 +61,13 @@ Content-Type: application/json
     "marca": "vans"
 }
 
-
 ### API SAPATO DELETE
-DELETE http://localhost:8080/api/v1/sapatos/1
+DELETE http://localhost:8080/api/v1/sapatos/9
 
 ##################################################################
 
 ### API ROUPA SUPERIOR GET
 GET http://localhost:8080/api/v1/roupassuperiores
-
-
 
 ### API ROUPA SUPERIOR POST
 POST http://localhost:8080/api/v1/roupassuperiores
@@ -92,10 +80,8 @@ Content-Type: application/json
     "tecido": "lycra"
 }
 
-
-
 ### API ROUPA SUPERIOR PUT
-PUT http://localhost:8080/api/v1/roupassuperiores/1
+PUT http://localhost:8080/api/v1/roupassuperiores/2
 Content-Type: application/json
 
 {
@@ -105,16 +91,13 @@ Content-Type: application/json
     "tecido": "algodão"
 }
 
-
 ### API ROUPA SUPERIOR DELETE
-DELETE http://localhost:8080/api/v1/roupassuperiores/1
+DELETE http://localhost:8080/api/v1/roupassuperiores/4
 
 ##################################################################
 
 ### API ROUPA INFERIOR GET
 GET http://localhost:8080/api/v1/roupasinferiores
-
-
 
 ### API ROUPA INFERIOR POST
 POST http://localhost:8080/api/v1/roupasinferiores
@@ -127,10 +110,8 @@ Content-Type: application/json
     "tecido": "jeans"
 }
 
-
-
 ### API ROUPA INFERIOR PUT
-PUT http://localhost:8080/api/v1/roupasinferiores/1
+PUT http://localhost:8080/api/v1/roupasinferiores/2
 Content-Type: application/json
 
 {
@@ -140,51 +121,13 @@ Content-Type: application/json
     "tecido": "jeans"
 }
 
-
 ### API ROUPA INFERIOR DELETE
 DELETE http://localhost:8080/api/v1/roupasinferiores/1
 
 ##################################################################
 
-### API LOOK GET
-GET http://localhost:8080/api/v1/looks
-
-
-
-### API LOOK POST
-POST http://localhost:8080/api/v1/looks
-Content-Type: application/json
-
-{
-    "tipo": "tênis",
-    "cor": "preto",
-    "tamanho": "37",
-    "marca": "vans"
-}
-
-
-
-### API LOOK PUT
-PUT http://localhost:8080/api/v1/looks/1
-Content-Type: application/json
-
-{
-    "tipo": "tênis",
-    "cor": "branco",
-    "tamanho": "37",
-    "marca": "vans"
-}
-
-
-### API LOOK DELETE
-DELETE http://localhost:8080/api/v1/looks/1
-
-##################################################################
-
 ### API ACESSORIO GET
 GET http://localhost:8080/api/v1/acessorios
-
-
 
 ### API ACESSORIO POST
 POST http://localhost:8080/api/v1/acessorios
@@ -193,21 +136,117 @@ Content-Type: application/json
 {
     "tipo": "colar",
     "cor": "prata",
-    "material": "prata 925",
+    "material": "prata 925"
 }
 
 
-
 ### API ACESSORIO PUT
-PUT http://localhost:8080/api/v1/acessorios/1
+PUT http://localhost:8080/api/v1/acessorios/2
 Content-Type: application/json
 
 {
     "tipo": "colar",
     "cor": "prata",
-    "material": "prata 950",
+    "material": "prata 950"
 }
 
-
 ### API ACESSORIO DELETE
-DELETE http://localhost:8080/api/v1/acessorios/1
+DELETE http://localhost:8080/api/v1/acessorios/3
+
+##################################################################
+
+### API LOOK GET
+GET http://localhost:8080/api/v1/looks
+
+### API LOOK POST
+POST http://localhost:8080/api/v1/looks
+Content-Type: application/json
+
+{
+    "usuario": {
+        "id": "1",
+        "nome": "zezinha",
+        "email": "ze@ze.com.br",
+        "senha": "5555",
+        "altura": "1.68",
+        "peso": "70",
+        "busto": "90",
+        "cintura": "80",
+        "quadril": "90"
+    },
+    "roupaInferior": {
+        "id": "1",
+        "tipo": "calça",
+        "cor": "azul",
+        "tamanho": "38",
+        "tecido": "jeans"
+    },
+    "roupaSuperior": {
+        "id": "2",
+        "tipo": "cropped",
+        "cor": "branco",
+        "tamanho": "G",
+        "tecido": "algodão"
+    },
+    "sapato": {
+        "id": "2",
+        "tipo": "tênis",
+        "cor": "branco",
+        "tamanho": "37",
+        "marca": "vans"
+    },
+    "acessorio": {
+        "id": "1",
+        "tipo": "colar",
+        "cor": "prata",
+        "material": "prata 925"
+    }
+}
+
+### API LOOK PUT
+PUT http://localhost:8080/api/v1/looks/2
+Content-Type: application/json
+
+{
+    "usuario": {
+        "id": "2",
+        "nome": "zezinho da silva",
+        "email": "zeze@ze.com.br",
+        "senha": "55556",
+        "altura": "1.70",
+        "peso": "75",
+        "busto": "98",
+        "cintura": "81",
+        "quadril": "92"
+    },
+    "roupaInferior": {
+        "id": "2",
+        "tipo": "calça",
+        "cor": "azul escuro",
+        "tamanho": "40",
+        "tecido": "jeans"
+    },
+    "roupaSuperior": {
+        "id": "1",
+        "tipo": "cropped",
+        "cor": "rosa",
+        "tamanho": "PP",
+        "tecido": "lycra"
+    },
+    "sapato": {
+        "id": "1",
+        "tipo": "tênis",
+        "cor": "preto",
+        "tamanho": "37",
+        "marca": "vans"
+    },
+    "acessorio": {
+        "id": "2",
+        "tipo": "colar",
+        "cor": "prata",
+        "material": "prata 950"
+    }
+}
+
+### API LOOK DELETE
+DELETE http://localhost:8080/api/v1/looks/4

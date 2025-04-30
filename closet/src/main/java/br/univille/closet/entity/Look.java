@@ -12,6 +12,8 @@ public class Look{
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private long id;
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
+    private Usuario usuario;
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private RoupaInferior roupaInferior;
     @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     private RoupaSuperior roupaSuperior;
@@ -58,5 +60,13 @@ public class Look{
 
     public void setSapato(Sapato sapato) {
         this.sapato = sapato;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

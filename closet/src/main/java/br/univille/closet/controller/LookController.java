@@ -57,6 +57,7 @@ public class LookController {
             return ResponseEntity.notFound().build();
         }
 
+        lookAntigo.setUsuario(look.getUsuario());
         lookAntigo.setRoupaInferior(look.getRoupaInferior());
         lookAntigo.setRoupaSuperior(look.getRoupaSuperior());
         lookAntigo.setAcessorio(look.getAcessorio());
