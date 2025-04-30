@@ -62,7 +62,7 @@ public class AcessoriosController {
         service.save(acessoriosAntigo);
         return new ResponseEntity<Acessorios>(acessoriosAntigo, HttpStatus.OK);
     }  
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Acessorios> deleteAcessorios(@PathVariable long id){
         if(id <= 0){
             return ResponseEntity.badRequest().build();

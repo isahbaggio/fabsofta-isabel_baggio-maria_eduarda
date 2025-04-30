@@ -65,7 +65,7 @@ public class LookController {
         service.save(lookAntigo);
         return new ResponseEntity<Look>(lookAntigo, HttpStatus.OK);
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Look> deleteLook(@PathVariable long id){
         if(id <= 0){
             return ResponseEntity.badRequest().build();

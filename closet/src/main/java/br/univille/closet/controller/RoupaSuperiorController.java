@@ -62,7 +62,7 @@ public class RoupaSuperiorController {
         service.save(roupaSuperiorAntigo);
         return new ResponseEntity<RoupaSuperior>(roupaSuperiorAntigo, HttpStatus.OK);
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<RoupaSuperior> deleteRoupaSuperior(@PathVariable long id){
         if(id <= 0){
             return ResponseEntity.badRequest().build();

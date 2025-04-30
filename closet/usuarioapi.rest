@@ -20,7 +20,7 @@ Content-Type: application/json
 
 
 
-### API CLIENTE PUT
+### API USUARIO PUT
 PUT http://localhost:8080/api/v1/usuarios/1
 Content-Type: application/json
 
@@ -36,5 +36,178 @@ Content-Type: application/json
 }
 
 
-### API CLIENTE DELETE
+### API USUARIO DELETE
 DELETE http://localhost:8080/api/v1/usuarios/1
+
+##################################################################
+
+### API SAPATO GET
+GET http://localhost:8080/api/v1/sapatos
+
+
+
+### API SAPATO POST
+POST http://localhost:8080/api/v1/sapatos
+Content-Type: application/json
+
+{
+    "tipo": "tênis",
+    "cor": "preto",
+    "tamanho": "37",
+    "marca": "vans"
+}
+
+
+
+### API SAPATO PUT
+PUT http://localhost:8080/api/v1/sapatos/1
+Content-Type: application/json
+
+{
+    "tipo": "tênis",
+    "cor": "branco",
+    "tamanho": "37",
+    "marca": "vans"
+}
+
+
+### API SAPATO DELETE
+DELETE http://localhost:8080/api/v1/sapatos/1
+
+##################################################################
+
+### API ROUPA SUPERIOR GET
+GET http://localhost:8080/api/v1/roupassuperiores
+
+
+
+### API ROUPA SUPERIOR POST
+POST http://localhost:8080/api/v1/roupassuperiores
+Content-Type: application/json
+
+{
+    "tipo": "cropped",
+    "cor": "rosa",
+    "tamanho": "PP",
+    "tecido": "lycra"
+}
+
+
+
+### API ROUPA SUPERIOR PUT
+PUT http://localhost:8080/api/v1/roupassuperiores/1
+Content-Type: application/json
+
+{
+    "tipo": "cropped",
+    "cor": "branco",
+    "tamanho": "G",
+    "tecido": "algodão"
+}
+
+
+### API ROUPA SUPERIOR DELETE
+DELETE http://localhost:8080/api/v1/roupassuperiores/1
+
+##################################################################
+
+### API ROUPA INFERIOR GET
+GET http://localhost:8080/api/v1/roupasinferiores
+
+
+
+### API ROUPA INFERIOR POST
+POST http://localhost:8080/api/v1/roupasinferiores
+Content-Type: application/json
+
+{
+    "tipo": "calça",
+    "cor": "azul",
+    "tamanho": "38",
+    "tecido": "jeans"
+}
+
+
+
+### API ROUPA INFERIOR PUT
+PUT http://localhost:8080/api/v1/roupasinferiores/1
+Content-Type: application/json
+
+{
+    "tipo": "calça",
+    "cor": "azul escuro",
+    "tamanho": "40",
+    "tecido": "jeans"
+}
+
+
+### API ROUPA INFERIOR DELETE
+DELETE http://localhost:8080/api/v1/roupasinferiores/1
+
+##################################################################
+
+### API LOOK GET
+GET http://localhost:8080/api/v1/looks
+
+
+
+### API LOOK POST
+POST http://localhost:8080/api/v1/looks
+Content-Type: application/json
+
+{
+    "tipo": "tênis",
+    "cor": "preto",
+    "tamanho": "37",
+    "marca": "vans"
+}
+
+
+
+### API LOOK PUT
+PUT http://localhost:8080/api/v1/looks/1
+Content-Type: application/json
+
+{
+    "tipo": "tênis",
+    "cor": "branco",
+    "tamanho": "37",
+    "marca": "vans"
+}
+
+
+### API LOOK DELETE
+DELETE http://localhost:8080/api/v1/looks/1
+
+##################################################################
+
+### API ACESSORIO GET
+GET http://localhost:8080/api/v1/acessorios
+
+
+
+### API ACESSORIO POST
+POST http://localhost:8080/api/v1/acessorios
+Content-Type: application/json
+
+{
+    "tipo": "colar",
+    "cor": "prata",
+    "material": "prata 925",
+}
+
+
+
+### API ACESSORIO PUT
+PUT http://localhost:8080/api/v1/acessorios/1
+Content-Type: application/json
+
+{
+    "tipo": "colar",
+    "cor": "prata",
+    "material": "prata 950",
+}
+
+
+### API ACESSORIO DELETE
+DELETE http://localhost:8080/api/v1/acessorios/1

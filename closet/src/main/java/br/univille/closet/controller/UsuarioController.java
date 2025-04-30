@@ -67,7 +67,7 @@ public class UsuarioController {
         service.save(usuarioAntigo);
         return new ResponseEntity<Usuario>(usuarioAntigo, HttpStatus.OK);
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Usuario> deleteUsuario(@PathVariable long id){
         if(id <= 0){
             return ResponseEntity.badRequest().build();

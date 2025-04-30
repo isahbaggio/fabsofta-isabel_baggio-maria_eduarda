@@ -61,7 +61,7 @@ public class SapatoController {
         service.save(sapatoAntigo);
         return new ResponseEntity<Sapato>(sapatoAntigo, HttpStatus.OK);
     }
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<Sapato> deleteSapato(@PathVariable long id){
         if(id <= 0){
             return ResponseEntity.badRequest().build();
