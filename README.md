@@ -6,16 +6,14 @@
 
  As funcionalidades do Closet Virtual foram pensadas com base nas seguintes histórias de usuário, escritas do ponto de vista de quem utiliza o sistema:
  
- | ID   | História                                                                                                                  | Prioridade |
-| ---- | ------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| US01 | Como **usuário**, quero **cadastrar minhas roupas superiores**, para manter meu guarda-roupa digital organizado.          | Alta       |
-| US02 | Como **usuário**, quero **cadastrar minhas roupas inferiores**, para registrar todas as peças que possuo.                 | Alta       |
-| US03 | Como **usuário**, quero **cadastrar acessórios**, para ter uma visão completa dos meus itens de moda.                     | Média      |
-| US04 | Como **usuário**, quero **editar ou excluir roupas já cadastradas**, para atualizar meu guarda-roupa conforme necessário. | Alta       |
-| US05 | Como **usuário**, quero **ver sugestões de looks com base no clima**, para saber o que vestir de forma adequada.          | Alta       |
-| US06 | Como **usuário**, quero **salvar looks favoritos**, para reutilizar combinações que gostei.                               | Média      |
-| US07 | Como **usuário**, quero **visualizar todas as peças cadastradas separadas por categoria**, para facilitar a navegação.    | Média      |
-| US08 | Como **usuário**, quero **gerar um look automaticamente**, para me vestir de forma prática no dia a dia.                  | Alta       |
+ | ID   | História                                                                                                                  | 
+| ---- | ------------------------------------------------------------------------------------------------------------------------- | 
+| US01 | Como **usuário**, quero **cadastrar minhas roupas superiores**, para manter meu guarda-roupa digital organizado.          | 
+| US02 | Como **usuário**, quero **cadastrar minhas roupas inferiores**, para registrar todas as peças que possuo.                 |
+| US03 | Como **usuário**, quero **cadastrar acessórios**, para ter uma visão completa dos meus itens de moda.                     |
+| US04 | Como **usuário**, quero **editar ou excluir roupas já cadastradas**, para atualizar meu guarda-roupa conforme necessário. |
+| US05 | Como **usuário**, quero **ver sugestões de looks com base no clima**, para saber o que vestir de forma adequada.          |
+| US06 | Como **usuário**, quero **salvar looks favoritos**, para reutilizar combinações que gostei.                               | 
 
 ##  🛠 Funcionalidades
 
