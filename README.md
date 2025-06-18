@@ -22,8 +22,12 @@
 
 ##  💻 Tecnologias
 
-- Java
-- Maven
+- Java ☕
+- Maven ⚙️
+- Spring Boot 🌱
+- REST API 🔗
+- Docker 🐳 (opcional)
+- GitHub Actions (CI/CD) 🚀
 
 ##  🚀 Como Rodar
 
